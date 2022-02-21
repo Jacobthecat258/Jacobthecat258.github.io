@@ -3,5 +3,5 @@ var projects = (async function() {
     var pro = obj.text();
     return pro;
 })();
-var projects = await projects;
+async var projects = await projects;
 console.log(projects);
