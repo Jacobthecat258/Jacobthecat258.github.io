@@ -3,4 +3,4 @@ var projects = (() => {
     var pro = await obj.text();
     return pro;
 })();
-console.log(pro);
+console.log(projects);
