@@ -1,7 +1,7 @@
 var projects = (async function() {
     var obj = await fetch("projects.json");
-    var pro = obj.text();
+    var txt = await obj.text();
+    var pro = "" + txt;
     return pro;
 })();
-async var projects = await projects;
 console.log(projects);
