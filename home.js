@@ -7,9 +7,10 @@ function loadPage(projects) {
 }
 
 function loadJSON(res) {
-    res.text().then(loadPage);
+    res.text().then(loadPage); //ADD JSON PARSING
 }
 
 fetch("projects.json").then(loadJSON);
 
 //THIS HAS NOT BEEN TESTED, NEXT THING TO DO IS TEST
+//NOW HAS BEEN TESTED, WORKING
