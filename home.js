@@ -1,8 +1,15 @@
-var projectsPromise = (async function() {
-    var obj = await fetch("projects.json");
-    return obj.json();
-})();
-projectsPromise.then((projectsJSON) => {
-    var projects = JSON.parse(projectsJSON);
-    console.log(projects);
-});
+var debug = {
+    projects: null //TEST THE VALUE OF THIS
+}
+
+function loadPage(projects) {
+    debug.projects = projects //For debugging
+}
+
+function loadJSON(res) {
+    res.text().then(loadPage);
+}
+
+fetch("projects.json").then(loadJSON);
+
+//THIS HAS NOT BEEN TESTED, NEXT THING TO DO IS TEST
