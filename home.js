@@ -8,12 +8,15 @@ function loadPage(projects) {
     debug.projects = projects //For debugging
 }
 
-function loadJSON(res) {
-    var parsed = JSON.parse(res)
-    parsed.text().then(loadPage); //ADD JSON PARSING - DONE
+function loadJSON(text) {
+    loadPage(JSON.parse(text));
 }
 
-fetch("projects.json").then(loadJSON);
+function loadText(res) {
+    parsed.text().then(loadPage); //ADD JSON PARSING - DONE - NOW MOVED
+}
+
+fetch("projects.json").then(loadText);
 
 //THIS HAS NOT BEEN TESTED, NEXT THING TO DO IS TEST - THIS IS OUTDATED, SEE TOP
 //NOW HAS BEEN TESTED, WORKING
