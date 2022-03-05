@@ -13,7 +13,7 @@ function loadJSON(text) {
 }
 
 function loadText(res) {
-    ReadableStream.text().then(loadJSON); //ADD JSON PARSING - DONE - NOW MOVED
+    res.text().then(loadJSON); //ADD JSON PARSING - DONE - NOW MOVED
 }
 
 fetch("projects.json").then(loadText);
