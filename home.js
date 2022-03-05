@@ -13,7 +13,7 @@ function loadJSON(text) {
 }
 
 function loadText(res) {
-    parsed.text().then(loadPage); //ADD JSON PARSING - DONE - NOW MOVED
+    res.text().then(loadPage); //ADD JSON PARSING - DONE - NOW MOVED
 }
 
 fetch("projects.json").then(loadText);
