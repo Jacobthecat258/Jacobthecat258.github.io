@@ -28,11 +28,11 @@ body {
 h1 {
     text-align: center;
 }
-div.sitetreeroot {
-    text-overflow: ellipsis;
-}
+/*div.sitetreeroot {} - Currently not used*/
 div.sitetreeitem {
     background-color: var(--theme-semi);
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 div.sitetreeitem:nth-child(2n) {
     background-color: var(--theme-bg);
