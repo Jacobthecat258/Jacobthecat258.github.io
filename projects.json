@@ -1,40 +1,16 @@
 {
     "pages": [
         {
-            "path": "/sussybaka"
+            "path": "../cssfree.html"
         },
         {
-            "path": "/sussybaka1"
+            "path": ".."
         },
         {
-            "path": "/sussybaka2"
+            "path": "dogchat"
         },
         {
-            "path": "/sussybaka3"
-        },
-        {
-            "path": "/sussybaka4"
-        },
-        {
-            "path": "/sussybaka5"
-        },
-        {
-            "path": "/sussybaka6"
-        },
-        {
-            "path": "/sussybaka7"
-        },
-        {
-            "path": "/cssfree.html"
-        },
-        {
-            "path": "/index.html"
-        },
-        {
-            "path": "/"
-        },
-        {
-            "path": "/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            "path": "under the dogs tail"
         }
     ]
 }

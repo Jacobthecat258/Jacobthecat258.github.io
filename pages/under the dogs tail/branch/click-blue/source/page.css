@@ -1,0 +1,10 @@
+.tail {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+html {
+    background: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

@@ -1,0 +1,44 @@
+h1 {
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 30px;
+}
+body, h1 {
+    margin: 0px;
+}
+.video-wrapper {
+    height: calc(100% - 30px);
+    width: 100%;
+    display: flex;
+}
+.video {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.video-bar {
+    height: 100%;
+    width: 4%;
+}
+body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: black;
+    height: 100%;
+}
+/** {
+    white-space: hidden;
+}*/
+.align {
+    align-items: center;
+    width: 48%;
+    height: 100%;
+    max-width: 48%;
+    max-height: 100%;
+    display: flex;
+}
+html {
+    height: 100%;
+}

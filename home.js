@@ -17,7 +17,7 @@ function generateHomeRow(row, value) {
     var row = document.createElement("div");
     row.classList.add("sitetreeitem");
     var a = document.createElement("a");
-    a.href = value;
+    a.href = `pages/${value}`;
     a.append(value);
     row.append(a);
     r.append(row);
