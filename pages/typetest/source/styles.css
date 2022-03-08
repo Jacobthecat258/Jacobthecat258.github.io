@@ -1,0 +1,16 @@
+:root {
+    --theme-bg: #ddd;
+    --theme-color: #222;
+    --theme-start: #2d2;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-bg: #222;
+        --theme-color: #ddd;
+        --theme-start: #060;
+    }
+}
+button {
+    background: var(--theme-start);
+    margin: auto;
+}
