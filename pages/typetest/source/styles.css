@@ -12,11 +12,17 @@
         --theme-bg-semi: #444;
     }
 }
+body {
+    background: var(--theme-bg);
+    color: var(--theme-color);
+}
 button {
     background: var(--theme-bg-semi);
-    border: none;/*todo: colors for bg and button*/
+    border: none;
+    border-radius: 3px;/*todo: colors for bg and button*/
 }
 .start {
     background: var(--theme-start);
+    color: var(--);
     margin: auto;
-}
+} /*todo: add j.css
