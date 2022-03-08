@@ -14,6 +14,7 @@
 }
 button {
     background: var(--theme-bg-semi);
+    border: none;/*todo: colors for bg and button*/
 }
 .start {
     background: var(--theme-start);
