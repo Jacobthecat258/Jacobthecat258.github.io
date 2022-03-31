@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <!--This is a fake math test for april fools. :) (for school 2021-2022)-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="test.css">
+        <title>Rainforest Testing</title>
+    </head>
+    <body>
+        <div class="home" id="home">
+            <h1 class="home-title">Log In</h1>
+            <div class="home-inputs-wrapper">
+                <div class="home-inputs">
+                    <div class="home-inputs-wrapper-2">
+                        <input type="text" class="home-input" id="username" placeholder="Username" id="login-username">
+                        <input type="text" class="home-input" id="password" placeholder="Password" id="login-password">
+                    </div>
+                </div>
+            </div>
+            <div class="home-login-wrapper">
+                <button class="home-login" id="login">Log In</button>
+            </div>
+        </div>
+        <div class="test" id="test">
+            <div class="test-bar">
+                <div class="test-bar-icon" id="hint">
+                    <div class="image hint"></div>
+                    <span class="test-bar-icon-text">Hint</span>
+                </div>
+            </div>
+            <div class="queston" id="queston"></div>
+            <div class="submit-bar">
+                <input type="text" class="answer" id="answer" placeholder="Answer Here">
+                <button class="submit" id="submit">Submit</button>
+            </div>
+        </div>
+        <div class="report" id="report">
+            <div class="score-wrapper">
+                <!--<div class="score-wrapper-2">-->
+                    <label for="score-display" id="score-text" class="score-text"></label>
+                    <meter min="0" id="score-display" class="score-display"></meter> <!--<meter> or <progress>-->
+                    <button class="download" onclick="$('#download').click();">Download Report
+                        <a id="download"></a>
+                    </button>
+                <!--</div>-->
+            </div>  
+        </div>
+        <script src="questons.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
