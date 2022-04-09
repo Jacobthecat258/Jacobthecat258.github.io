@@ -1,0 +1,23 @@
+:root { /*I should make text input and button styles*/
+    --visitmargintop: 8px;
+    overflow: hidden;
+}
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+}
+iframe {
+    border: none;
+    width: 100%;
+}
+html, body, #view, iframe {
+    height: 100%;
+}
+body.visit {
+    height: calc(100% - var(--visitmargintop))
+}
+#visit {
+    margin-left: 8px;
+    margin-top: var(--visitmargintop); 
+}

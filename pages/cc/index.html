@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Color Change</title>
+<style>
+.Button {
+background-color:green;
+}
+body {
+	background-color:teal; 
+}
+.all {
+	text-align:center;
+	font-size:75px
+	}
+.Red {
+	background-color:red;
+	color:darkred;
+}
+.Blue {
+	background-color:blue;
+	color:darkblue;
+}
+.Orange {
+	background-color:orange;
+	color:darkorange;
+}
+.Green {
+	background-color:green;
+	color:darkgreen;
+}
+.Pink {
+	background-color:pink;
+	color:purple;
+}
+.Purple {
+	background-color:purple;
+	color:black;
+}
+.Black {
+	background-color:white;
+	color:black;
+}	
+
+</style>
+<script>
+var str = "Text" ;
+var resultRed = str.fontcolor("Red");
+var resultBlue = str.fontcolor("Blue");
+function setColorBlue() {document.getElementById("Text").innerHTML = resultBlue};
+function setColorRed() {document.getElementById("Text").innerHTML = resultRed};
+var resultPink = str.fontcolor("Pink");
+function setColorPink() {document.getElementById("Text").innerHTML = resultPink};
+var resultOrange = str.fontcolor("Orange");
+function setColorOrange() {document.getElementById("Text").innerHTML = resultOrange};
+function setColorGreen() {document.getElementById("Text").innerHTML = resultGreen};
+var resultGreen = str.fontcolor("Green");
+var resultPurple = str.fontcolor("Purple");
+function setColorPurple() {document.getElementById("Text").innerHTML = resultPurple};
+var resultBlack = str.fontcolor("Black");
+function setColorBlack()  {document.getElementById("Text").innerHTML = resultBlack};
+</script>
+</head>
+<body>
+<noscript>Sorry, we have a error. Something makes us not be able to run javascript.</noscript>
+<div class="all">
+<div class="Button">
+<button onclick="setColorRed()" class="Red">Red</button>
+<button onclick="setColorBlue()" class="Blue">Blue</button>
+<button onclick="setColorPink()" class="Pink">Pink</button> 
+<button onclick="setColorOrange()" class="Orange">Orange</button>
+<button onclick="setColorGreen()" class="Green">Green</button> 
+<button onclick="setColorPurple()" class="Purple">Purple</button>
+<button onclick="setColorBlack()" class="Black">Black</button> 
+</div>
+<p id="Text">Text</p>
+</div>
+</body>
+</html>

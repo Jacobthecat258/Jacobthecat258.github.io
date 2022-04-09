@@ -14,6 +14,12 @@
         },
         {
             "path": "../Math Test"
+        },
+        {
+            "path": "cc"
+        },
+        {
+            "path": "htmlos"
         }
     ]
 }
