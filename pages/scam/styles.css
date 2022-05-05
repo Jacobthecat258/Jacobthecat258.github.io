@@ -1,0 +1,32 @@
+@keyframes color {
+    from {
+        color: #fff;
+        background: #000;
+    } to {
+        color: #000;
+        background: #fff;
+    }
+}
+body, input, button {
+    animation: color 1s alternate 0s infinite;
+}
+body {
+    background: url("assets/roblox.jpg") #ddd !important;
+    background-size: cover;
+    color: #222;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+#document {
+    display: none;
+}
+p {
+    font-family: initial;
+}
+input {
+    display: block;
+    margin-bottom: 20px;
+}
+button {
+    font-size: 20px;
+}
