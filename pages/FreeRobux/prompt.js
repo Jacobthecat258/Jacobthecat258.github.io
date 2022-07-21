@@ -23,8 +23,8 @@
         z-index: 2;
     }
     #prompt {
-        min-width: 500px;
-        min-height: 200px;
+        min-width: 50vw;
+        min-height: 20vh;
         margin: auto;
         background: #ddd;
         border-radius: 20px;
@@ -36,8 +36,7 @@
         border-bottom: 2px solid #bbb;
     }
     #prompt-button-row {
-        position: absolute;
-        bottom: 20px;
+        margin-top: 10px;
     }
     .prompt-button {
         font-size: 1.5em;
