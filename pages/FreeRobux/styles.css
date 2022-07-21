@@ -1,0 +1,83 @@
+body {
+    margin: 0px;
+}
+
+.page-title {
+    color: #ddd;
+    font-family: sans-serif;
+    text-align: center;
+    background: #444;
+    box-shadow: 10px 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+}
+.page-title > h1 {
+    font-size: 3em;
+    margin-top: 0px;
+}
+.page-title > h2 {
+    font-style: italic;
+}
+
+textbody {
+    margin-top: 20px;
+    border: 2px solid #aaa;
+    border-left: 5px solid #f55;
+    border-right: none;
+    padding-left: 2px;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+[important] {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.top-space {
+    margin: 20px;
+}
+
+@keyframes buttonLarge {
+    from {
+        font-size: 2em;
+        /*transform: rotate3d(0, 0, 0, 360deg);*/
+    } to {
+        font-size: 3em;
+        /*transform: rotate3d(1, 1, 1, 360deg);*/
+    }
+}
+button {
+    font-family: sans-serif;
+    font-size: 2em;
+    border: none;
+    border-radius: 10px;
+    background: #2a2;
+    color: #ddd;
+    padding: 5px;
+    cursor: pointer;
+}
+.button-large-container {
+    height: calc(3em + 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-large-container > div > button {
+    animation-name: buttonLarge;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#status {
+    margin: 20px;
+}
+#prompt-wrapper {
+    font-family: sans-serif;
+}
+#prompt button {
+    color: inherit;
+}
