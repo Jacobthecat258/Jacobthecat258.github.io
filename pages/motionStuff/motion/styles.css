@@ -1,0 +1,3 @@
+html {height: 100%;}
+body {display: flex; height: 100%; margin: 0px;}
+body * {display: block; margin: auto; max-height: 100vh; max-width: 100vw;}

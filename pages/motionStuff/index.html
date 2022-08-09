@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <body>
+        <a href="rr_motion">RR motion</a>
+        <a href="motion">Motion stuff</a>
+        <h1>Motion stuff settings</h1>
+        <p id="status"></p>
+        <button id="update">Change status</button>
+        <script>
+            //ls
+            if (!localStorage.getItem("motionsettings")) {
+                localStorage.setItem("motionsettings", JSON.stringify({
+                    number: 0,
+                    one: false,
+                    two: false
+                }));
+            }
+            //main
+            var text = document.querySelector("#status");
+            var a = ["Hello there", "Hello there notification", "Video", "Color video"];
+            function fromNumber(n) {
+                var s = JSON.parse(localStorage.getItem("motionsettings"));
+                if (n == 0) {
+                    s.one = true;
+                    s.two = false;
+                } else if (n == 1) {
+                    s.one = true;
+                    s.two = true;
+                } else if (n == 2) {
+                    s.one = false;
+                    s.two = true;
+                } else {
+                    s.one = false;
+                    s.two = false;
+                }
+                text.innerHTML = a[n];
+                s.number = n;
+                return JSON.stringify(s);
+            }
+            document.querySelector("#update").onclick = function() {
+                var s = JSON.parse(localStorage.getItem("motionsettings"));
+                var n = s.number + 1;
+                if (n > 3) n = 0;
+                s.number = n;
+                localStorage.setItem("motionsettings", fromNumber(n));
+            }
+            text.innerHTML = a[JSON.parse(localStorage.getItem("motionsettings")).number];
+        </script>
+    </body>
+</html>
