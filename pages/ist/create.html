@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Create ist</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width,initial-scale:1">
+    </head>
+    <body>
+        <div bbwrapper><button backbtn>Back</button></div>
+        <h1>Take Photo</h1>
+        <video id="v"></video>
+        <div id="takePicture-wrappper">
+            <button id="takePicture">Take Picture</button>
+        </div>
+        <h1>About Item</h1>
+        <canvas id="photo"></canvas>
+        <div id="submit-wrapper">
+            <input id="price" type="text" placeholder="About this item">
+            <button id="submit">Submit</button>
+        </div>
+        <script>
+            function $(e) {
+                return document.querySelector(e);
+            }
+            var v = $("#v");
+            var t = $("#takePicture");
+            var p = $("#photo");
+            var c = p.getContext("2d");
+            var pr = $("#price");
+            var s = $("#submit");
+            t.onclick = function() {
+                var se = cam.getTracks()[0].getSettings();
+                p.width = se.width;
+                p.height = se.height;
+                c.drawImage(v, 0, 0, se.width, se.height);
+            }
+            s.onclick = function() {
+                var ls = JSON.parse(localStorage.getItem("ist"));
+                var se = cam.getTracks()[0].getSettings();
+                var a = c.getImageData(0, 0, se.width, se.height).data;
+                var b = "";
+                for (var i = 0; i < a.length; i++) {
+                    b += String.fromCharCode(a[i]);
+                }
+                console.log(b);
+                ls.push({photo: b, price: pr.value, width: se.width, height: se.height});
+                window._dbg = ls[ls.length-1];
+                try {
+                    localStorage.setItem("ist", JSON.stringify(ls));
+                } catch {
+                    alert("Your storage for this site is full. Please expand the local storage limit.");
+                    return;
+                }
+                console.log(ls, ls.length);
+                alert("ID: " + (ls.length - 1));
+                window.location.href = "index.html"
+            }
+            var cam;
+            (async()=>{
+            cam = await navigator.mediaDevices.getUserMedia({video: true});
+            v.srcObject = cam;
+            v.play();
+            })();
+        </script>
+        <script src="back.js"></script>
+        <script src="winres.js"></script>
+    </body>
+</html>

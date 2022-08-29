@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Lookup ist</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width,initial-scale:1">
+    </head>
+    <body>
+        <!--dont forget remove can be in here-->
+        <div bbwrapper><button backbtn>Back</button></div>
+        <canvas id="photo"></canvas>
+        <p id="price"></p>
+        <div id="del-wrapper">
+            <button id="del">Delete Item</button>
+        </div>
+        <script>
+            function $(e) {
+                return document.querySelector(e);
+            }
+            var p = $("#photo");
+            var ctx = p.getContext("2d");
+            var pr = $("#price");
+            var d = $("#del");
+            var u = new URL(window.location.href);
+            var itemNumber = u.searchParams.get("i");
+            var ls = JSON.parse(localStorage.getItem("ist"));
+            var item = ls[itemNumber];
+            if (!item) {
+                alert("Cannot find item");
+                window.location.href = "index.html";
+            }
+            var photoData = [];
+            var encodedPhoto = item.photo;
+            var idat = new ImageData(item.width, item.height);
+            for (var i = 0; i < encodedPhoto.length; i++) {
+                photoData.push(encodedPhoto.charCodeAt(i));
+            }
+            for (var i = 0; i < photoData.length; i = i + 4) {
+                idat.data[i + 0] = photoData[i + 0];
+                idat.data[i + 1] = photoData[i + 1];
+                idat.data[i + 2] = photoData[i + 2];
+                idat.data[i + 3] = photoData[i + 3];
+            }
+            console.log(photoData);
+            p.width = item.width;
+            p.height = item.height;
+            pr.innerHTML = item.price;
+            ctx.putImageData(idat, 0, 0);
+            d.onclick = function() {
+                var p = prompt("Type \"yes\" if you would like to delete " + item.price + " (any capitalization)");
+                if (p?.toLowerCase() === "yes") {
+                    ls[u.searchParams.get("i")] = null;
+                    localStorage.setItem("ist", JSON.stringify(ls));
+                    window.location.href = "index.html";
+                }
+            }
+        </script>
+        <script src="back.js"></script>
+        <script src="winres.js"></script>
+    </body>
+</html>
