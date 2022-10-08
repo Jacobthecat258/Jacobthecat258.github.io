@@ -1,0 +1,42 @@
+/*rr*/
+@media screen and (orientation:portrait) {
+    body[rrbody] {
+        align-items: center;
+    }
+}
+@media screen and (orientation:landscape) { 
+    body[rrbody] {
+        justify-content: center;
+    }
+}
+[h100] {
+    height: 100%;
+}
+[flex] {
+    display: flex;
+}
+video[rr] {
+    width: 100vw;
+}
+[blackbg] {
+    background: #000;
+}
+body[rrbody] {
+    margin: 0px;
+}
+/*snaps*/
+:root {
+    font-family: sans-serif;
+}
+body[snaps] {
+    margin: 0px;
+}
+#wrapper > :not(:first-child) {
+    border-top: 2px solid #999;
+}
+#wrapper {
+    background: #555;
+}
+#amount-wrapper {
+    margin-left: 8px;
+}

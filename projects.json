@@ -32,7 +32,12 @@
         },
         {
             "path": "ist"
+        },
+        {
+            "path": "../rrsnap"
+        },
+        {
+            "path": "../rrsnap/snaps.html"
         }
-        
     ]
 }
