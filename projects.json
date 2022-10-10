@@ -38,6 +38,9 @@
         },
         {
             "path": "../rrsnap/snaps.html"
+        },
+        {
+            "path": "../gcrrs.zip"
         }
     ]
 }
