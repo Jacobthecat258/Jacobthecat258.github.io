@@ -43,7 +43,7 @@
             "path": "../gcrrs.zip"
         },
         {
-            "path": "htmlos/_branch/dev"
+            "path": "htmlos/branch/dev"
         }
     ]
 }
