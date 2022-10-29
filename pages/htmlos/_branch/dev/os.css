@@ -1,0 +1,170 @@
+/*Settings*/
+:root {
+    --main-font: sans-serif;
+    --icon-width: 50px;
+    --icon-height: 50px;
+    --icon-name-size: 10px;
+    --icon-name-align: center;
+    --icon-image-height: 40px;
+    --window-header-color: blue;
+    --window-header-size: 30px;
+    --window-iframe-default-width: 600px;
+    --window-iframe-default-height: 300px;
+    --window-iframe-min-width: 300px;
+    --window-iframe-min-height: 150px;
+    --window-background: #fff;
+    --window-close-button-color: #f00;
+    --window-maximize-button-color: #ff0;
+    --window-button-spacing: 5px;
+    --ctm-background: #ddd;
+    --ctm-border-radius: 5px;
+    --ctm-min-width: 100px;
+    --ctm-max-width: 200px;
+    --ctm-item-border-size: 2px;
+    --ctm-item-border-color: #ccc;
+    --ctm-item-margin-left: 5px;
+    --text-input-spacing: 5px;
+}
+
+/*Styles*/
+:root {
+    font-family: var(--main-font);
+}
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    margin: 0px;
+}
+
+/*Desktop Styles*/
+#desktop {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.desktopitem {
+    display: flex;
+    flex-direction: column;
+    width: var(--icon-width);
+    min-height: var(--icon-height);
+    font-size: var(--icon-name-size);
+    cursor: pointer;
+    position: absolute;
+}
+.desktopitem {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.desktopitem:hover, .desktopitem.preview {
+    overflow: visible;
+    --white-space: pre-line;
+}
+.desktopitem.preview {
+    width: unset;
+    min-width: var(--icon-height);
+}
+.desktopitemname {
+    overflow: inherit;
+    text-overflow: inherit;
+    white-space: var(--white-space, nowrap);
+    text-align: var(--icon-name-align);
+}
+.desktopitemimagewrapper {
+    /*justify-content: center;*/
+    display: flex;
+    flex-grow: 1;
+}
+.desktopitemimage { /*TODO: Remove image wrapper, as it's use was to center the element, but is not done in the background-position property*/
+    width: 100%;
+    height: var(--icon-height);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*margin: auto;*/
+}
+img {display: none;}
+
+/*Window Styles*/
+#windows {
+    z-index: 1;
+    position: absolute;
+}
+.window {
+    position: absolute;
+    background: var(--window-background);
+    resize: both;
+    overflow: hidden;
+    width: var(--window-iframe-default-width);
+    height: calc(var(--window-iframe-default-height) + var(--window-header-size));
+    min-width: var(--window-iframe-min-width);
+    min-height: calc(var(--window-iframe-min-height) + var(--window-header-size));
+}
+.window:not(.fullscreen) {
+    width: var(--window-iframe-default-width);
+    height: var(--window-iframe-default-height);
+    max-width: calc(100vw - var(--left));
+    max-height: calc(100vh - var(--top));
+}
+.windowheader {
+    height: var(--window-header-size);
+    background-color: var(--window-header-color);
+    display: flex;
+}
+.windowiframe {
+    border: none;
+    width: 100%;
+    height: calc(100% - var(--window-header-size));
+}
+.windowclose {
+    background: var(--window-close-button-color);
+}
+.windowmaximize {
+    background: var(--window-maximize-button-color);
+}
+.windowclose, .windowmaximize {
+    display: inline-block;
+    width: var(--window-header-size);
+    height: var(--window-header-size);
+    cursor: pointer;
+    border: none;
+}
+.windowiframedragsurface {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - var(--window-header-size));
+    top: var(--window-header-size);
+    left: 0px;
+    display: none;
+}
+.windowbutton:not(.windowclose) {
+    margin-left: var(--window-button-spacing);
+}
+
+/*Context Menu Styles*/
+.ctm {
+    position: absolute;
+    min-width: var(--ctm-min-width);
+    max-width: var(--ctm-max-width);
+}
+.ctmitem {
+    background: var(--ctm-background);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: var(--ctm-item-border-size) solid var(--ctm-item-border-color);
+    cursor: pointer;
+    padding-left: var(--ctm-item-margin-left);
+}
+.ctmitem:first-child {
+    border-top-left-radius: var(--ctm-border-radius);
+    border-top-right-radius: var(--ctm-border-radius);
+}
+.ctmitem:last-child {
+    border-bottom-left-radius: var(--ctm-border-radius);
+    border-bottom-right-radius: var(--ctm-border-radius);
+    border-bottom: none;
+}

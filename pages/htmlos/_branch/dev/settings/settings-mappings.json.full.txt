@@ -1,0 +1,26 @@
+This file just stores css-mappings.json but without removed entries that aren't shown in settings.
+
+
+
+[
+    "iconWidth",
+    "iconHeight",
+    "iconNameSize",
+    "iconImageHeight",
+    "windowHeaderColor",
+    "windowHeaderSize",
+    "windowIframeDefaultWidth",
+    "windowIframeDefaultHeight",
+    "windowBackground",
+    "windowCloseButtonColor",
+    "windowMaximizeButtonColor",
+    "windowButtonSpacing",
+    "ctmBackground",
+    "ctmBorderRadius",
+    "ctmMinWidth",
+    "ctmMaxWidth",
+    "ctmItemBorderSize",
+    "ctmItemBorderColor",
+    "ctmItemMarginLeft",
+    "textInputSpacing"
+]

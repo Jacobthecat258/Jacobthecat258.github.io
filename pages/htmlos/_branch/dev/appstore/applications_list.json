@@ -1,0 +1,29 @@
+[
+    {
+        "name": "2D Game",
+        "icon": "applications/2D Game/textures/player.svg",
+        "application": "applications/2D Game/index.html",
+        "isref": true,
+        "config": {
+            "width": 100,
+            "height": 100,
+            "minWidth": 100,
+            "minHeight": 100,
+            "resize": "none",
+            "fullscreen": false,
+            "fullscreenToggle": false
+        }
+    },
+    {
+        "name": "Media Player",
+        "icon": "applications/Media Player/icon.svg",
+        "application": "applications/Media Player/index.html",
+        "isref": true
+    },
+    {
+        "name": "Virtual PC",
+        "icon": "../assets/iframe.svg",
+        "application": "../",
+        "isref": true
+    }
+]

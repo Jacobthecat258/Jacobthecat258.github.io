@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+    <circle cx="5" cy="5" r="5" fill="#ff0" />
+    <circle cx="3" cy="3" r="1" fill="#000" />
+    <circle cx="7" cy="3" r="1" fill="#000" />
+    <ellipse cx="5" cy="6" rx="4" ry="2" mask="url(#mask)" fill="#000" />
+    <mask id="mask">
+    <rect x="0" y="0" width="10" height="10" fill="#fff" />
+    <ellipse cx="5" cy="5" rx="4" ry="2" fill="#000" />
+    </mask>
+</svg>

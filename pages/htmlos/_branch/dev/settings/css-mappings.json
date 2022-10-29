@@ -1,0 +1,23 @@
+[
+    "icon-width",
+    "icon-height",
+    "icon-name-size",
+    "window-header-color",
+    "window-header-size",
+    "window-iframe-default-width",
+    "window-iframe-default-height",
+    "window-iframe-min-width",
+    "window-iframe-min-height",
+    "window-background",
+    "window-close-button-color",
+    "window-maximize-button-color",
+    "window-button-spacing",
+    "ctm-background",
+    "ctm-border-radius",
+    "ctm-min-width",
+    "ctm-max-width",
+    "ctm-item-border-size",
+    "ctm-item-border-color",
+    "ctm-item-margin-left",
+    "text-input-spacing"
+]

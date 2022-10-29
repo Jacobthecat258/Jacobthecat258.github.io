@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <link rel="stylesheet" href="../os.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="wrapper2">
+                <div id="settings">
+                    <h1>Settings</h1>
+                    <h2>Icons</h2>
+                    <setting n>Icon Width</setting>
+                    <setting n>Icon Height</setting>
+                    <setting n>Icon Name Size</setting>
+                    <h2>Windows</h2>
+                    <setting c>Window Header Color</setting>
+                    <setting n>Window Header Size</setting>
+                    <setting n>Window Display Default Width (When an app doesn't set the width)</setting>
+                    <setting n>Window Display Default Height (When an app doesn't set the height)</setting>
+                    <setting n>Window Display Minimum Width (When an app doesn't set the minimum width)</setting>
+                    <setting n>Window Display Minimum Height (When an app doesn't set the minimum height)</setting>
+                    <setting c>Window Background</setting>
+                    <setting c>Window Close Button Color</setting>
+                    <setting c>Window Maximize Button Color</setting>
+                    <setting n>Window Button Spacing</setting>
+                    <h2>Context Menus</h2>
+                    <setting c>Context Menu Background</setting>
+                    <setting n>Context Menu Border Radius</setting>
+                    <setting n>Context Menu Minimum Width</setting>
+                    <setting n>Context Menu Maximum Width</setting>
+                    <setting n>Context Menu Item Border Size</setting>
+                    <setting c>Context Menu Item Border Color</setting>
+                    <setting n>Context Menu Item Margin Left</setting>
+                    <h2>Other</h2>
+                    <setting n>Settings Menu Text Input Spacing</setting>
+                </div>
+                <h2>Wallpaper</h2>
+                <input id="wallpaper" style="width: 100%;">
+                <a href="javascript:uploadWP()">Use a file</a>
+            </div>
+            <div id="bottom">
+                <button id="save">Save</button>
+            </div>
+        </div>
+        <script src="../localstorage.js"></script>
+        <script src="setting-parser.js"></script>
+        <script src="settings.js"></script>
+        <style>
+            html, body, #wrapper {
+                height: 100%;
+            }
+            body {
+                margin: 0px;
+                font-family: var(--main-font);
+            }
+            #wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+            #settings {
+                flex-grow: 1;
+            }
+            #wrapper2 {
+                overflow-y: scroll;
+                box-sizing: border-box;
+                padding: 8px;
+            }
+            #bottom {
+                padding: 8px;
+                background: #ddd;
+            }
+            setting {
+                display: block;
+            }
+            input {
+                margin-left: var(--text-input-spacing);
+                box-sizing: border-box;
+                margin: 0px;
+            }
+        </style>
+    </body>
+</html>

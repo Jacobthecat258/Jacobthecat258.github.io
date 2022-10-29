@@ -1,0 +1,40 @@
+/*Settings*/
+:root {
+    --font: sans-serif;
+    --title-margin: 10px 0px calc(10% + 10px) 20px;
+    --title-fs: 2em;
+    --title-height: 32px;
+    --applications-backgrounds: #ddd;
+    --applications-height: calc(calc(100% - 32px) - calc(2 * calc(10% + 20px)));
+}
+
+/*Styles*/
+:root {
+    font-family: var(--font);
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0px;
+    display: inline-block;
+}
+h1 {
+    margin: var(--title-margin);
+    font-size: var(--title-fs);
+    height: var(--title-height);
+}
+#applications {
+    height: var(--applications-height);
+    background: var(--applications-backgrounds);
+    overflow-y: auto;
+    position: relative;
+}
+
+/*Icon Styles*/
+.desktopitem {
+    display: inline-flex;
+    position: relative;
+    left: 10px;
+}

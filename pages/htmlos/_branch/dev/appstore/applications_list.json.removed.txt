@@ -1,0 +1,31 @@
+[
+    {
+        "name": "App1",
+        "icon": "../assets/iframe.svg",
+        "application": "../applications/iframe/index.html",
+        "isref": true
+    },
+    {
+        "name": "App2",
+        "icon": "../assets/appstore.svg",
+        "application": "<script>alert('App2')</script>"
+    },
+    {
+        "name": "App2_isref_false",
+        "icon": "../assets/appstore.svg",
+        "application": "<script>alert('App2')</script>",
+        "isref": false
+    },
+    {
+        "name": "2D Game",
+        "icon": "applications/2D Game/textures/player.svg",
+        "application": "applications/2D Game/index.html",
+        "isref": true
+    },
+    {
+        "name": "Media Player",
+        "icon": "applications/Media Player/icon.svg",
+        "application": "applications/Media Player/index.html",
+        "isref": true
+    }
+]

@@ -1,0 +1,23 @@
+[
+    "iconWidth",
+    "iconHeight",
+    "iconNameSize",
+    "windowHeaderColor",
+    "windowHeaderSize",
+    "windowIframeDefaultWidth",
+    "windowIframeDefaultHeight",
+    "windowIframeMinWidth",
+    "windowIframeMinHeight",
+    "windowBackground",
+    "windowCloseButtonColor",
+    "windowMaximizeButtonColor",
+    "windowButtonSpacing",
+    "ctmBackground",
+    "ctmBorderRadius",
+    "ctmMinWidth",
+    "ctmMaxWidth",
+    "ctmItemBorderSize",
+    "ctmItemBorderColor",
+    "ctmItemMarginLeft",
+    "textInputSpacing"
+]

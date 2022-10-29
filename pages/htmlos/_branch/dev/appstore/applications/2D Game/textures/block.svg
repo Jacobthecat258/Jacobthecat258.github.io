@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+    <style>
+        :root {
+            --main: #940;
+        }
+    </style>
+    <rect width="10" height="10" x="0" y="0" fill="var(--main)" />
+</svg>

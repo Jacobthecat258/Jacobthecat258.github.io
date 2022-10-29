@@ -1,0 +1,11 @@
+body {
+    margin: 0px;
+}
+html, body {
+    height: 100%;
+}
+
+/*Debug*/
+#debug {
+    font-size: 1.5px;
+}
