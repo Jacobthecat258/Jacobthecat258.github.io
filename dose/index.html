@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Developer Build HyperText Markup Language Operating System Experience (DOSE, DHTMLOSE HTMLOS)</title>
+    </head>
+    <body>
+        <h1>Press any key to begin.</h1>
+        <p>You may have to press a key multiple times. If this doesn't work, try a different key, reload, or try a different OS/Browser</p>
+        <style>
+            html {
+                cursor: none;
+                height: 100%;
+            }
+            body {
+                background: #000;
+                color: #fff;
+                font-family: monospace;
+            }
+            iframe {
+                background: #fff;
+                width: 0px;
+                box-sizing: border-box;
+                border: none;
+            }
+        </style>
+        <script>
+            var ifr;
+            onkeydown = function() {
+                if (!document.fullscreen) {
+                    if (ifr) {
+                        document.body.append(ifr);
+                        ifr.requestFullscreen();
+                    } else {
+                        ifr = document.createElement("iframe");
+                        ifr.src = "https://jacobthecat258.github.io/pages/htmlos/branch/dev";
+                        ifr.requestFullscreen();
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

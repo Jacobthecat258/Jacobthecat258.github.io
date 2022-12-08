@@ -44,6 +44,15 @@
         },
         {
             "path": "htmlos/branch/dev"
+        },
+        {
+            "path": "../dose?thisIsAWIP"
+        },
+        {
+            "path": "../sandbox"
+        },
+        {
+            "path": "../sandbox/blank.html"
         }
     ]
 }
