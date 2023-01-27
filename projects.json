@@ -53,6 +53,9 @@
         },
         {
             "path": "../sandbox/blank.html"
+        },
+        {
+            "path": "scoutgame"
         }
     ]
 }

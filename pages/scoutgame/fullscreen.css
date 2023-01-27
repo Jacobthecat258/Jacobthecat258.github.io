@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+body > *:nth-child(1) {
+    aspect-ratio: var(--fs-w)/var(--fs-h);
+    width: calc(min(calc(100vw/var(--fs-w)),calc(100vh/var(--fs-h)))*var(--fs-w));
+}
