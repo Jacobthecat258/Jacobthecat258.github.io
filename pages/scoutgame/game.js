@@ -124,17 +124,23 @@ function tick() {
     window.requestAnimationFrame(tick);
 }
 
+function buttonPressed() {
+    if (gameOver) {
+        init();
+        return;
+    }
+    let distanceToEnd = /*1790*/ 1000 - barY;
+    playerX += (distanceToEnd * distanceToEnd * distanceToEnd) / 700000;
+    score += Math.max(0, Math.ceil(distanceToEnd / 50));
+    barY = 1060;
+}
+
 window.addEventListener("keydown", function(e) {
     if (e.code == "Space") {
-        if (gameOver) {
-            init();
-            return;
-        }
-        let distanceToEnd = /*1790*/ 1000 - barY;
-        playerX += (distanceToEnd * distanceToEnd * distanceToEnd) / 700000;
-        score += Math.max(0, Math.ceil(distanceToEnd / 50));
-        barY = 1060;
+        buttonPressed();
     }
 });
+window.addEventListener("mousedown", buttonPressed);
+window.addEventListener("touchstart", buttonPressed);
 
 tick();
