@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+    <circle cx="5" cy="1" r="1" fill="#666" />
+    <circle cx="8" cy="2" r="1" fill="#777" />
+    <circle cx="9" cy="5" r="1" fill="#777" />
+    <circle cx="8" cy="8" r="1" fill="#888" />
+    <circle cx="5" cy="9" r="1" fill="#999" />
+    <circle cx="2" cy="8" r="1" fill="#999" />
+    <circle cx="1" cy="5" r="1" fill="#aaa" />
+    <circle cx="2" cy="2" r="1" fill="#bbb" />
+</svg>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+function applyOpenRotation(ctx) {
+    ctx.openRotation = function(rotation) {
+        ctx.openRotation._currentRotation = rotation;
+        ctx.rotate(rotation);
+        return {
+            close: function() {
+                ctx.rotate(0 - ctx.openRotation._currentRotation);
+            }
+        }
+    }
+    ctx.openRotation._currentRotation = 0;
+}
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+applyOpenRotation(ctx);
+var rot = ctx.openRotation(10 * Math.PI / 180);
+//ctx.rotate(20 * Math.PI / 180);
+ctx.fillRect(50, 20, 100, 50);
+var r2 = ctx.openRotation(10 * Math.PI / 180);
+ctx.fillStyle = "#0f0";
+ctx.fillRect(50, 20, 100, 50);
+rot.close();
+//ctx.rotate(20 * Math.PI / 180);
+ctx.fillStyle = "#f00";
+ctx.fillRect(50, 20, 100, 50);
+r2.close();
+</script>
+
+</body>
+</html>

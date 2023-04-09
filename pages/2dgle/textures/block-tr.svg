@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+    <style>
+        :root {
+            --main: #940;
+        }
+    </style>
+    <polygon points="0, 0, 10, 0, 10, 10" fill="var(--main)" />
+</svg>

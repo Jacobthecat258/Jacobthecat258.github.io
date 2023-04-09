@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+    <style>
+        :root {
+            --color: #00ff00;
+            --center: rgba(0, 0, 0, 0);
+        }
+    </style>
+    <circle cx="3" cy="3" r="2.5" fill="var(--center)" stroke="var(--color)" stroke-width="1" />
+    <rect x="5" y="2" width="5" height="2" fill="var(--color)" />
+    <rect x="7" y="3" width="1" height="2" fill="var(--color)" />
+    <rect x="9" y="3" width="1" height="2" fill="var(--color)" />
+</svg>

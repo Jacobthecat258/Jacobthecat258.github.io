@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>2D Game Help</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/svg+xml" href="../textures/player.svg">
+    </head>
+    <body>
+        <h1>How to Play</h1>
+        <!--p>Here is a brief overview of the gameplay:</p-->
+        <h2>Controls</h2>
+        <p>Use the Arrow Keys (<code>&larr;</code> and <code>&rarr;</code> or <code>A</code> and <code>D</code>) to move. Use <code>&uarr;</code>, <code>W</code>, or <code>Space</code> to jump.</p>
+        <h1 style="margin-top: 100px;">More Help</h1>
+        <h2>Gameplay</h2>
+        <p>You control the <b player>Player</b>. The goal of this game is to reach the <b goal>Goal Object</b>s. To do this, you must perform a variety of tasks including: </p>
+        <ul>
+            <li>Collecting <b gkey>Key</b>s to unlock <b gkb>Key Block</b>s</li>
+            <li>Using <b splate>Plate</b>s to change your size, allowing you to reach higher places or fit through smaller gaps;</li>
+            <li>Avoiding <b death>Death Block</b>s</li>
+        </ul>
+        <h2 gkey>Keys</h2>
+        <p>There are two sets of keys: Green (<b gkey>Green Key</b>s and <b gkb>Green Key Block</b>s) and Red (<b rkey>Red Key</b>s and <b rkb>Red Key Block</b>s). When you run into a <b gkb>Key Block</b>, you won't be able to pass through. However, if you had collected a <b gkey>Key</b>, it would open (disappear). You can also have <b gkey><b rkey><b gkey></b></b></b>multiple keys at once or a mix of multiple colors of keys. For example, you could collect a <b gkey>Green Key</b>. If you tried to go through a <b rkb>Red Key Block</b>, but it wouldn't work. But if there was a <b gkb>Green Key Block</b>, you could unlock it. But if there is another <b gkb>Green Key Block</b>, you couldn't unlock it because you already used up all of your keys. Then you collect a <b gkey>Green Key</b> and <b rkey><b rkey>two Red Keys</b></b>. You could unlock both a <b gkb>Green Key Block</b> and a <b rkb>Red Key Block</b> in any order. But if you try to unlock another <b gkb>Green Key Block</b>, you won't be able to because you already used your <b gkey>Green Key</b>. But if there was a <b rkb>Red Key Block</b>, you could unlock it because you still have one <b rkey>Red Key</b> left.</p>
+        <h2 splate>Plates</h2>
+        <p>There are two types of plates: <b splate>Small Plate</b>s and <b lplate>Large Plate</b>s. <b splate>Plate</b>s change the <b player>Player</b>'s size. Upon death, the <b player>Player</b>'s size will reset.</p>
+        <h2 goal>Goals</h2>
+        <p><b goal>Goal</b>s are your main objective to get to. There may be multiple in a level, so sometimes goals will be won't be immediately accessible. Goals can do multiple things, such as:</p>
+        <ul>
+            <li>Changing where the <b player>Player</b> starts</li>
+            <li>Changing the size that the <b player>Player</b> starts at</li>
+            <li>Giving you <b gkey>Key</b>s from the start of the level</li>
+        </ul>
+        <h2>Death</h2>
+        <p>Death can be caused by two things: Falling below the level (in some levels) and touching <b death>Death Block</b>s. When you die, you go back to either where you started after you reached you most recent <b goal>Goal</b>, or where you started the game if you haven't gotten to a <b goal>Goal</b> yet.</p>
+        <h2>More Controls</h2>
+        <ul>
+            <li>Press <code>P</code> to record</li>
+            <li>Press <code>Ctrl</code>+<code>O</code> to open a level or extension</li>
+        </ul>
+        <h2>Level Editor</h2>
+        <p>To toggle between the level editor and game, press <code>Ctrl</code>+<code>M</code>. The controls are:</p>
+        <ul>
+            <li><code>W</code><code>A</code><code>S</code><code>D</code> or <code>&uarr;</code><code>&larr;</code><code>&darr;</code><code>&rarr;</code> to move</li>
+            <li>Click an object to select it, or <code>Ctrl</code> click it to select multiple objects</li>
+            <li>Use <code>Ctrl</code>+<code>A</code> to select all objects</li>
+            <li>Press <code>Delete</code> to delete all selected objects</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
+    <style>
+        :root {
+            --base: red;
+            --parts: yellow;
+        }
+    </style>
+    <rect x="0" y="0" width="10" height="10" fill="var(--base)" />
+    <rect x="3" y="3" width="4" height="4" fill="var(--parts)" />
+</svg>

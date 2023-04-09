@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>2D Game</title>
+        <link rel="icon" type="image/svg+xml" href="textures/player.svg">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    </head>
+    <body>
+        <!--script>location.href="http://html5test.com/"</script-->
+        <!--script>location.href="https://scratch.mit.edu"</script-->
+        <div id="game-wrapper"></div>
+        <div id="debug" style="font-size: 2em"></div>
+        <script src="debug.js"></script>
+        <script src="jrc2.js"></script>
+        <!--script src="config.js"></script-->
+        <script src="level_data.js"></script>
+        <script src="level.js"></script>
+        <script src="editorcfg.js"></script>
+        <script src="game.js"></script>
+
+        <script>
+            (function (global) {
+            
+                if(typeof (global) === "undefined")
+                {
+                    throw new Error("window is undefined");
+                }
+            
+                var _hash = "!";
+                var noBackPlease = function () {
+                    global.location.href += "#";
+            
+                    // making sure we have the fruit available for juice....
+                    // 50 milliseconds for just once do not cost much (^__^)
+                    global.setTimeout(function () {
+                        global.location.href += "!";
+                    }, 1000);
+                };
+                
+                // Earlier we had setInerval here....
+                global.onhashchange = function () {
+                    if (global.location.hash !== _hash) {
+                        global.location.hash = _hash;
+                    }
+                };
+            
+                global.onload = function () {
+                    
+                    noBackPlease();
+            
+                    // disables backspace on page except on input fields and textarea..
+                    document.body.onkeydown = function (e) {
+                        var elm = e.target.nodeName.toLowerCase();
+                        if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
+                            e.preventDefault();
+                        }
+                        // stopping event bubbling up the DOM tree..
+                        e.stopPropagation();
+                    };
+                    
+                };
+            
+            })(window);
+            </script>
+    </body>
+</html>

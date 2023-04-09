@@ -1,0 +1,69 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-pcs-bg: #222;
+        --theme-pcs-color: #ddd;
+        --theme-pcs-semi: #444;
+    }
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --theme-pcs-bg: #ddd;
+        --theme-pcs-color: #222;
+        --theme-pcs-semi: #bbb;
+    }
+}
+:root {
+    font-family: sans-serif;
+    --theme-default-bg: #ddd;
+    --theme-default-color: #222;
+    --theme-default-semi: #bbb;
+    --theme-bg: var(--theme-pcs-bg, var(--theme-default-bg));
+    --theme-color: var(--theme-pcs-color, var(--theme-default-color));
+    --theme-semi: var(--theme-pcs-semi, var(--theme-default-semi));
+}
+body {
+    background: var(--theme-bg);
+    color: var(--theme-color);
+    font-family: sans-serif;
+}
+code {
+    background: var(--theme-pcs-semi);
+    padding: 2px;
+    border: 2px solid var(--theme-pcs-color);
+    border-radius: 5px;
+}
+[goal]::before, [gkey]::before, [gkb]::before, [rkey]::before, [rkb]::before, [splate]::before, [lplate]::before, [player]::before, [death]::before {
+    width: 1em;
+    height: 1em;
+    content: "";
+    display: inline-block;
+    background-size: 100% 100%;
+    margin-right: 5px;
+}
+[goal]::before {
+    background-image: url("../textures/goal.svg");
+}
+[gkey]::before {
+    background-image: url("../textures/green-key.svg");
+}
+[gkb]::before {
+    background-image: url("../textures/green-key-block.svg");
+}
+[rkey]::before {
+    background-image: url("../textures/red-key.svg");
+}
+[rkb]::before {
+    background-image: url("../textures/red-key-block.svg");
+}
+[splate]::before {
+    background-image: url("../textures/small_help_plate.svg");
+}
+[lplate]::before {
+    background-image: url("../textures/large_help_plate.svg");
+}
+[player]::before {
+    background-image: url("../textures/player.svg");
+}
+[death]::before {
+    background-image: url("../textures/death.svg");
+}
