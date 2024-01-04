@@ -4,17 +4,17 @@ const questons =
     {
         "queston": "How old was Ms. Murphy when she learned the fact 3x12?",
         "answers": ["22", "twenty two", "twenty-two"],
-        "hint": "The answer is 21"
+        "hint": "The answer is 666"
     },
     {
-        "queston": "What's the square root of 432,753,642?",
+        "queston": "What's the square root of 567865434567?",
         "answers": [],
         "hint": "the square root of the speed of light"
     },
     {
         "queston": "What time is a quarter past the start of leap day?",
         "answers": [],
-        "hint": "sussy baka"
+        "hint": "sussy baka amogus"
     },
     {
         "queston": "How many plants would Mr. O have if he bought 10 more plants?",
@@ -54,6 +54,6 @@ const questons =
     {
         "queston": "sussy baka",
         "answers": ["among us"],
-        "hint": "sus amognus"
+        "hint": "sus amognus 🤣🤣🤣🤣"
     }
 ]
